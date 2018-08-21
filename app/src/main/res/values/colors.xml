@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#4CAF50</color>
+    <color name="colorPrimary_light">#8BC34A</color>
+    <color name="colorAccent">#4CAF50</color>
+
+    <color name="Primary">#4CAF50</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTitle">#5e5e5e</color>
+    <color name="colorTitleLight">#848484</color>
+
+    <color name="colorGray">#515151</color>
+
+    <color name="fb_color">#3b5999</color>
+    <color name="google_color">#cd201f</color>
+
+    <color name="colorOrange">#F2B32A</color>
+    <color name="colorDivider">#fafafa</color>
+    <color name="colorItemNavigation">#b9b9b9</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+</resources>

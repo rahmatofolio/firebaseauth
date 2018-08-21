@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="signupModel"
+            type="com.rahmatofolio.mvp.data.SignupModel"/>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="handler"
+            type="android.widget.RadioGroup.OnCheckedChangeListener"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_title"
+                    android:text="@string/hint_signup"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_8dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/divider"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/tv_label_grey"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:text="@string/hint_login_use"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/divider"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFacebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/btn_social"
+                        android:onClick="@{listener::onClick}"
+                        android:drawableStart="@drawable/ic_facebook"
+                        android:drawablePadding="@dimen/margin_16dp"
+                        android:layout_marginEnd="@dimen/margin_4dp"
+                        android:text="@string/facebook"/>
+
+                    <TextView
+                        android:id="@+id/tvGoogle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/btn_social"
+                        android:onClick="@{listener::onClick}"
+                        android:drawableStart="@drawable/ic_google"
+                        android:drawablePadding="@dimen/margin_16dp"
+                        android:layout_marginStart="@dimen/margin_4dp"
+                        android:text="@string/google"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_name"/>
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_form"
+                    android:text="@={signupModel.name}"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_email"/>
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_form"
+                    android:text="@={signupModel.email}"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_gender"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onCheckedChanged="@{handler::onCheckedChanged}"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdMan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_gender_man"/>
+
+                    <RadioButton
+                        android:id="@+id/rdGirl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_gender_girl"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_username"/>
+
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_form"
+                    android:text="@={signupModel.username}"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_password"/>
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_form"
+                    android:inputType="textPassword"
+                    android:text="@={signupModel.password}"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_label"
+                    android:text="@string/hint_enter_referral"/>
+
+                <EditText
+                    android:id="@+id/edtReferral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/input_form"
+                    android:text="@={signupModel.referral}"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/tv_label_grey"
+                    android:text="@string/hint_agreement"/>
+
+                <Button
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onClick}"
+                    style="@style/btn_primary"
+                    android:text="@string/hint_signup"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

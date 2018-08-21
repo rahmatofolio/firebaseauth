@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">FirebaseAuth</string>
+
+    <string name="facebook_app_id">187745398574894</string>
+    <string name="fb_login_protocol_scheme">fb187745398574894</string>
+
+    <string name="choose_photo">Take Photo</string>
+    <string name="choose_gallery">Choose From Gallery</string>
+    <string name="choose_cancel">Cancel</string>
+    <string name="choose_title">Choose</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">SETTINGS</string>
+    <string name="alert_no_connection">Check your internet connection</string>
+    <string name="alert">Alert</string>
+
+    <string name="title_home">Home</string>
+
+    <string name="hint_login">Login</string>
+    <string name="hint_agreement">Dengan mendaftar, Anda telah menyetujui <u>aturan penggunaan</u> dan <u>kebijakan privasi</u> Konsulio</string>
+    <string name="hint_enter_email_username">E-MAIL / USERNAME</string>
+    <string name="hint_enter_referral">KODE REFERRAL (OPTIONAL)</string>
+    <string name="hint_enter_username">USERNAME</string>
+    <string name="hint_enter_name">NAMA LENGKAP</string>
+    <string name="hint_enter_password">PASSWORD</string>
+    <string name="hint_enter_email">EMAIL</string>
+    <string name="hint_enter_gender">JENIS KELAMIN</string>
+    <string name="hint_gender_man">Laki-laki</string>
+    <string name="hint_gender_girl">Perempuan</string>
+    <string name="hint_signup">Daftar</string>
+    <string name="hint_signup_now">Daftar sekarang</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_not_have_account">Belum punya akun?</string>
+    <string name="hint_have_account">Sudah punya akun?</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="hint_login_with">atau login dengan</string>
+    <string name="hint_login_use">menggunakan</string>
+    <string name="hint_forgot_pass">Lupa Password?</string>
+
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+
+    <string name="val_enter_email">Enter valid Email</string>
+    <string name="val_enter_username">Enter valid Username</string>
+    <string name="val_enter_name">Enter valid Name</string>
+    <string name="val_enter_gender">Choose Gender</string>
+    <string name="val_enter_password">Enter valid Password</string>
+    <string name="val_confirm_password">Confirm Password does not match</string>
+</resources>
